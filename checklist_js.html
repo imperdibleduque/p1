@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Lista de tareas </title>
+		<meta  chartset="UTF-8">
+		<style type="text/css">
+			body{font-size: 18px;}
+			li{cursor:pointer;}
+			span{font-weight:bold;color:red;}
+			li:hover{text-decoration:underline;}
+		</style>
+		<script>
+			function cambiar(tarea) {
+				var estado = document.getElementById(tarea);
+					if(estado.innerHTML === "[PENDIENTE]") {
+						estado.innerHTML= "[HECHO]";
+						estado.style.color = '#00FF00';
+					} else {
+							estado.innerHTML = "[PENDIENTE]";
+							estado.style.color = '#FF0000';
+							
+						}
+					}
+		</script>			
+	<head>
+	<body>
+	<h3> Lista de tareas escritas en HTML</h3>
+	<hr>
+	<div>
+	  <ol>
+		 <li onclick="cambiar('t1')"> <span id="t1">[PENDIENTE]</span>Escribir el código HTML</li>
+		 <li onclick="cambiar('t2')"> <span id="t2">[PENDIENTE]</span>Añadir código CSS mediante etiqueta style</li>
+		 <li onclick="cambiar('t3')"> <span id="t3">[PENDIENTE]</span>Añadir código JavaScript</li> 
+		 <li onclick="cambiar('t4')"> <span id="t4">[PENDIENTE]</span>Comprobar funcionamiento</li> 
+		 <li onclick="cambiar('t5')"> <span id="t5">[PENDIENTE]</span>Subir al servidor necities </li> 
+		 <li onclick="cambiar('t6')"> <span id="t6">[PENDIENTE]</span>Subir al Drive</li>
+		 <li onclick="cambiar('t7')"> <span id="t7">[PENDIENTE]</span>Anotar en hoja de cálculo como actividad terminada</li>
+	  </ol>
+	</div>
+	<hr>
+	</body>
+</html>
